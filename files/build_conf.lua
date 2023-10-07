@@ -127,7 +127,7 @@ local function update_dns(profile)
     local nameserver = get("global", "nameserver", nil)
     local ipv6 = get_bool("global", "ipv6", false)
 
-    local profile_dns = {}
+    local profile_dns = profile["dns"]
     profile_dns["enable"] = tproxy_enabled
     profile_dns["enhanced-mode"] = "fake-ip"
     profile_dns["ipv6"] = ipv6
